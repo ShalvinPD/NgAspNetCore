@@ -1,0 +1,25 @@
+
+
+
+<h2>My Contacts</h2>
+<ul class="contacts">
+    <li *ngFor="let c of contacts" (click) ="onSelect(c.contactId)">
+         <span class = "badge">{{c.contactId}}</span>  {{c.contactName}} </li>
+</ul>
+
+<div *ngIf = "selectedContact">
+    <div>
+        Name 
+        <input type="text" [value] = selectedContact.contactName>
+    </div>
+    <div>
+        Location
+        <input type="text" [value] = selectedContact.location>
+    </div>
+</div>
+
+<!-- {{contacts | json}} -->
+
+{{selectedContact | json}}
+
+

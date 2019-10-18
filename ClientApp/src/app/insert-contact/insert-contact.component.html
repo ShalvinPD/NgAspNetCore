@@ -1,0 +1,16 @@
+<div>
+  <div>
+    Name  
+    <input type="text" [(ngModel)] = contact.contactName>
+</div>
+<div>
+    Location
+    <input type="text"  [(ngModel)] = contact.location>
+</div>
+<div>
+    <button (click) = "save()">Save</button>
+</div>
+
+</div>
+
+{{contact | json }}
